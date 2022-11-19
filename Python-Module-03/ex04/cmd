@@ -1,0 +1,18 @@
+import os
+import pandas
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+D = pandas.read_table("solar_system_census.csv",sep=",", decimal=".")
+D.drop(columns=['Unnamed: 0']) #supprimer premiere colonne
+#D=pandas.DataFrame(D)
+D.plot(x='height', y='weight', kind="scatter")
+plt.show()
+
+#on a la liste des resolutions 
+#result = [3,1,0,4,...]
+# On rajoute au tableau panda 
+# B['labels'] = result
+sns.pairplot(B,hue="labels")
+plt.show()
+

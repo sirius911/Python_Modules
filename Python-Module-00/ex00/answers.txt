@@ -1,0 +1,5 @@
+pip list -V
+pip show numpy
+pip uninstall numpy
+pip install numpy
+pip list --format freeze > requirements.txt
